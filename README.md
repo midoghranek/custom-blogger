@@ -3,7 +3,6 @@
     <img src="https://raw.githubusercontent.com/midoghranek/custom-blogger/master/assets/icon128.png" alt="Logo shades-of-purple-google-chrome" width="120">
   </a>
 </div>
-<br>
 <h1 align="center">Custom Blogger Chrome Extension</h1>
 <h5 align="center">Chrome Extension for Blogger (blogger.com) developers, with shortcuts and basic edits.</h5>
 
