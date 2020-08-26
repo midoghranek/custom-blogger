@@ -1,5 +1,5 @@
 /*
- * @secret.js is file containing secret data
+ * @secretjs is file containing secret data
  * @Define `Const googleAPi` on secret.js
  */
 
