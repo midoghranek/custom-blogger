@@ -11,4 +11,4 @@ Chrome Extension for Blogger (blogger.com) developers, with shortcuts and basic 
 If you have any idea to edit blogger code editors in browser extension contact me at me@ghranek.com
 
 <br/>
-<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/ghranek"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Support me"><span style="margin-left:5px;font-size:18px !important;">Support me</span></a>
+<a href="https://www.buymeacoffee.com/ghranek" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
