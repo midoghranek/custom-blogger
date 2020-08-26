@@ -7,7 +7,6 @@
 <h5 align="center">Chrome Extension for Blogger (blogger.com) developers, with shortcuts and basic edits.</h5>
 
 <br>
-<br>
 
 ## Shortcuts
 
