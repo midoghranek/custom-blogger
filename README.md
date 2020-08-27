@@ -22,6 +22,8 @@ New feature for code snippets, select your snippet, and it will be copied direct
 
 <br>
 
+## Support
+
 If you have any idea to edit blogger code editors in browser extension contact me at me@ghranek.com
 
 <br/>
