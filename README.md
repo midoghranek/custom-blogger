@@ -16,6 +16,12 @@
 
 <br>
 
+## Snippets
+
+New feature for code snippets, select your snippet, and it will be copied directly to clipboard.
+
+<br>
+
 If you have any idea to edit blogger code editors in browser extension contact me at me@ghranek.com
 
 <br/>

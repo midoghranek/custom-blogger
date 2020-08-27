@@ -15,7 +15,12 @@
   "content_scripts": [
     {
       "matches": ["https://*.blogger.com/*"],
-      "js": ["scripts/secret.js", "scripts/content.js"]
+      "js": [
+        "scripts/secret.js",
+        "scripts/snippetsData.js",
+        "scripts/snippets.js",
+        "scripts/content.js"
+      ]
     }
   ],
   "browser_action": {
