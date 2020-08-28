@@ -1,7 +1,10 @@
-document.addEventListener("readystatechange", () => {
+// Snippet function
+const snippetCall = () => {
+  // Select head & body
   const head = document.head;
   const body = document.body;
 
+  // snippet html controls
   const select = document.createElement("select");
   const message = document.createElement("div");
   select.id = "snippets";
@@ -49,9 +52,11 @@ document.addEventListener("readystatechange", () => {
     return result;
   };
 
+  // Create Style Tag
   const style = document.createElement("style");
   style.type = "text/css";
 
+  // Styles (CSS)
   style.innerHTML = `
      #snippets {
       position: fixed;
@@ -83,9 +88,6 @@ document.addEventListener("readystatechange", () => {
       background-position: right .7em top 50%, 0 0;
       background-size: .65em auto, 100%;
      }
-     #snippets:hover {
-
-    }
     #snippets:focus {
       box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
       box-shadow: 0 0 0 3px -moz-mac-focusring;
@@ -94,11 +96,7 @@ document.addEventListener("readystatechange", () => {
     #snippets option {
       font-weight:normal;
     }
-    #snippets:disabled:hover {
-
-    }
-
-    div#message {
+    #message {
       position: fixed;
       z-index: 999;
       bottom: -50px;
@@ -112,12 +110,43 @@ document.addEventListener("readystatechange", () => {
       margin-left: -250px;
       border-radius: 50px;
       transition: bottom .5s;
-  }
-  #message span {
-    color: yellow;
-    font-weight: bold;
-  }
+    }
+    #message span {
+      color: yellow;
+      font-weight: bold;
+    }
   `;
 
+  // Apppend styles
   head.appendChild(style);
+};
+
+const backButton = document.querySelector('div[aria-label="Go back"]');
+const searchForButton = document.getElementsByTagName("span");
+const searchText = "Edit HTML";
+let editButton;
+
+for (var i = 0; i < searchForButton.length; i++) {
+  if (searchForButton[i].textContent == searchText) {
+    editButton = searchForButton[i];
+    break;
+  }
+}
+
+if (editButton)
+  editButton.addEventListener("click", () => {
+    snippetCall();
+  });
+
+backButton.addEventListener("click", () => {
+  if (document.contains(document.getElementById("snippets")))
+    document.getElementById("snippets").remove();
 });
+
+// snippets selector on editor page
+if (location.pathname.includes("/blog/themes/edit/")) {
+  // Do everything after page loaded
+  document.addEventListener("readystatechange", () => {
+    snippetCall();
+  });
+}
