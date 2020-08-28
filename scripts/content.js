@@ -17,6 +17,13 @@ const getBlogURL = async (url) => {
 
 // Blogger Custom Editor shortcuts ...
 document.addEventListener("keydown", (event) => {
+  if (
+    !document.getElementById("snippets") &&
+    location.pathname.includes("/blog/themes/edit/")
+  ) {
+    snippetCall();
+  }
+
   let ctrl = event.ctrlKey,
     code = event.which || event.keyCode,
     currentBlogId = location.pathname.replace("/blog/themes/edit/", ""),

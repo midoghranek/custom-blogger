@@ -20,6 +20,8 @@
 
 New feature for code snippets, select your snippet, and it will be copied directly to clipboard.
 
+Note: Sometimes snippet selector not showing, don't worry just click on any button on keyboard, or refresh the editor page.
+
 <br>
 
 ## Support
