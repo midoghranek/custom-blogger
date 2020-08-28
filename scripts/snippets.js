@@ -20,6 +20,10 @@ const snippetCall = () => {
     <option value="widget/menu">Menu Widget</option>
     <option value="widget/html">HTML Widget</option>
     <option value="widget/labels">Labels Widget</option>
+    <option value="js/encoded">Javascript Encoded Script</option>
+    <option value="skin">Skin</option>
+    <option value="template-skin">Template Skin</option>
+    <option value="js/blogData">Javascript Blog Data</option>
     `;
   body.appendChild(select);
   body.appendChild(message);
