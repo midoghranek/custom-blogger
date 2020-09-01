@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="#">
+  <a href="https://chrome.google.com/webstore/detail/custom-blogger-extension/edbhcnncibhjdeflaagkbdklifcdklmc">
     <img src="https://raw.githubusercontent.com/midoghranek/custom-blogger/master/assets/icon128.png" alt="Logo shades-of-purple-google-chrome" width="120">
   </a>
 </div>
