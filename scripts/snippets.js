@@ -25,6 +25,7 @@ const snippetCall = () => {
     <option value="template-skin">Template Skin</option>
     <option value="js/blogData">Javascript Blog Data</option>
     <option value="normalize.css">normalize.css</option>
+    <option value="view-classes">Global view classes</option>
     `;
   body.appendChild(select);
   body.appendChild(message);
