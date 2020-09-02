@@ -1,6 +1,6 @@
 /*
  * @secretjs is file containing secret data
- * @Define `Const googleAPi` on secret.js
+ * @Define `const googleAPi` on secret.js
  */
 
 // content.js
@@ -60,10 +60,12 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-if (location.pathname.includes("/blog/themes/edit/")) {
-  if (!localStorage.getItem(currentBlogId)) {
-    getBlogURL(fetchURL).then((data) => {
-      localStorage.setItem(currentBlogId, data.url);
-    });
-  }
+// Save blog url on local storage
+if (
+  location.pathname.includes("/blog/themes/edit/") &&
+  !localStorage.getItem(currentBlogId)
+) {
+  getBlogURL(fetchURL).then((data) => {
+    localStorage.setItem(currentBlogId, data.url);
+  });
 }

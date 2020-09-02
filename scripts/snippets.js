@@ -32,8 +32,8 @@ const snippetCall = () => {
 
   // Copy to clipboard snippets
   document.getElementById("snippets").onchange = function () {
-    let text = this.value;
-    var textarea = document.createElement("textarea");
+    const text = this.value;
+    const textarea = document.createElement("textarea");
 
     let code;
     snippets.map((sn) => {
@@ -43,7 +43,7 @@ const snippetCall = () => {
     textarea.value = code;
     document.body.appendChild(textarea);
     textarea.select();
-    var result = document.execCommand("copy");
+    const result = document.execCommand("copy");
 
     message.innerHTML = `<span>${this.value}</span> snippet has been copied to clipboard`;
     message.style.bottom = "50px";
@@ -132,7 +132,7 @@ const searchForButton = document.getElementsByTagName("span");
 const searchText = "Edit HTML";
 let editButton;
 
-for (var i = 0; i < searchForButton.length; i++) {
+for (let i = 0; i < searchForButton.length; i++) {
   if (searchForButton[i].textContent == searchText) {
     editButton = searchForButton[i];
     break;
