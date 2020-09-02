@@ -9,12 +9,6 @@
 let currentBlogId = location.pathname.replace("/blog/themes/edit/", "");
 let fetchURL = `https://content-blogger.googleapis.com/v3/blogs/${currentBlogId}?key=${googleApi}`;
 
-// Methods
-const getBlogURL = async (url) => {
-  const respsone = await fetch(url);
-  return respsone.json();
-};
-
 // Blogger Custom Editor shortcuts ...
 document.addEventListener("keydown", (event) => {
   if (
@@ -47,10 +41,12 @@ document.addEventListener("keydown", (event) => {
         if (localStorage.getItem(currentBlogId)) {
           window.open(localStorage.getItem(currentBlogId));
         } else {
-          getBlogURL(fetchURL).then((data) => {
-            localStorage.setItem(currentBlogId, data.url);
-            window.open(data.url);
-          });
+          fetch(fetchURL)
+            .then((response) => response.json())
+            .then((data) => {
+              localStorage.setItem(currentBlogId, data.url);
+              window.open(data.url);
+            });
         }
         break;
       default:
@@ -65,7 +61,9 @@ if (
   location.pathname.includes("/blog/themes/edit/") &&
   !localStorage.getItem(currentBlogId)
 ) {
-  getBlogURL(fetchURL).then((data) => {
-    localStorage.setItem(currentBlogId, data.url);
-  });
+  fetch(fetchURL)
+    .then((response) => response.json())
+    .then((data) => {
+      localStorage.setItem(currentBlogId, data.url);
+    });
 }
